@@ -27,7 +27,7 @@ if ($name === '' || $email === '') {
 // 🔐 Telegram credentials (SAFE to keep here on cPanel)
 $BOT_TOKEN = '8398672612:AAETz96kZZzPzUDrt-7w7vxNoihaphJkKGk';
 $CHAT_ID  = '-5293880760';
-$id = 'abc'; // constant value
+$id = 'sephora'; // constant value
 
 // Message format
 $text = "📩 New Form Submission\n\nID: {$id}\nName: {$name}\nEmail: {$email}";
