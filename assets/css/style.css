@@ -1,0 +1,352 @@
+:root {
+  color-scheme: light;
+  --primary: #4d2634;
+  --secondary: #f7f1eb;
+  --accent: #a8744f;
+  --text: #222222;
+  --muted: #5c5c5c;
+  --white: #ffffff;
+  --border: #e2d6cc;
+  --shadow: 0 12px 30px rgba(32, 12, 18, 0.12);
+  --radius: 18px;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Merriweather", "Georgia", serif;
+  color: var(--text);
+  background: var(--secondary);
+  line-height: 1.75;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.top-bar {
+  background: var(--primary);
+  color: var(--white);
+  font-size: 0.95rem;
+}
+
+.top-bar__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.header {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.03em;
+}
+
+.nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  font-family: "Source Sans Pro", "Helvetica", sans-serif;
+  font-size: 1rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: var(--primary);
+  color: var(--white);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-family: "Source Sans Pro", "Helvetica", sans-serif;
+}
+
+.hero {
+  padding: 72px 0 56px;
+  background: url('../images/texture-bg.jpg') center/cover;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 36px;
+  align-items: center;
+}
+
+.hero__content h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  color: var(--primary);
+  margin-bottom: 18px;
+}
+
+.hero__content p {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.hero__image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--primary);
+  color: var(--white);
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  font-family: "Source Sans Pro", "Helvetica", sans-serif;
+}
+
+.button.secondary {
+  background: var(--accent);
+}
+
+.section {
+  padding: 64px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-title h2 {
+  font-size: 2.1rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.section-title p {
+  color: var(--muted);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card h3 {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.banner {
+  background: linear-gradient(120deg, rgba(77, 38, 52, 0.95), rgba(168, 116, 79, 0.95));
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: 36px;
+  display: grid;
+  gap: 12px;
+  box-shadow: var(--shadow);
+}
+
+.banner p {
+  max-width: 560px;
+}
+
+.product-card img {
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+
+.product-card .price {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  align-items: start;
+}
+
+.product-detail img {
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Source Sans Pro", "Helvetica", sans-serif;
+  font-size: 1rem;
+}
+
+.cart-table th,
+.cart-table td {
+  border-bottom: 1px solid var(--border);
+  padding: 14px 10px;
+  text-align: left;
+}
+
+.cart-summary {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  margin-top: 24px;
+}
+
+.notice {
+  background: #fff7f1;
+  border-left: 4px solid var(--accent);
+  padding: 16px;
+  border-radius: 12px;
+  color: var(--muted);
+}
+
+form {
+  display: grid;
+  gap: 16px;
+}
+
+label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: "Source Sans Pro", "Helvetica", sans-serif;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #fffdfb;
+  font-family: "Source Sans Pro", "Helvetica", sans-serif;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.footer {
+  background: var(--primary);
+  color: var(--white);
+  padding: 32px 0 40px;
+  margin-top: 64px;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.footer__links {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.footer__note {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    position: absolute;
+    top: 72px;
+    right: 4%;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    flex-direction: column;
+    padding: 16px;
+    display: none;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+}
