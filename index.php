@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__ . '/adspectbootstrap.php';
 require_once __DIR__ . '/bootstrap.php';
 $active = 'home';
 $metaTitle = 'Roger Clothing | Classic Fashion for 45+ Adults';
